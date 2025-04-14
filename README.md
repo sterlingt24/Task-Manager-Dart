@@ -11,3 +11,14 @@ LINK for Windows:
 https://docs.flutter.dev/get-started/install/windows/mobile
 
 ____________________________________________________________
+
+## Mermaid of Model
+
+```mermaid
+classDiagram
+    class Task {
+        +String title
+        +bool isCompleted
+        +Task(String title, bool isCompleted = false)
+    }
+```
