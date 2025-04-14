@@ -1,16 +1,13 @@
-# sterlingtflutttertest
+# TaskManagerDart
 
-A new Flutter project.
+A in-progress task manager that is meant to help guide and keep track of tasks that could be long, intermediate , or short term.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Follow the install Guides on the flutter.dev Websites for VS Code
+____________________________________________________________
+LINK for Windows:
 
-A few resources to get you started if this is your first Flutter project:
+https://docs.flutter.dev/get-started/install/windows/mobile
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+____________________________________________________________
