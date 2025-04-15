@@ -1,3 +1,6 @@
+//main format of application (view)
+//Future Updates: Visuals for model view interaction
+
 import 'package:flutter/material.dart';
 import 'model.dart'; 
 import 'widgets.dart';
