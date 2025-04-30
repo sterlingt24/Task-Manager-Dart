@@ -69,30 +69,30 @@ classDiagram
 
 ##Methods of Model
 ```mermaid
-    classDiagram
-    direction LR
-
+classDiagram
     class Task {
         +String title
         +bool isCompleted
-        +Task({title, isCompleted})
-        +toJson(): Map~String, dynamic~
-        +fromJson(Map~String, dynamic~): Task
+        +Task(String title, bool isCompleted)
+        +Map<String, dynamic> toJson()
+        +factory Task.fromJson(Map<String, dynamic> json)
     }
 
     class TaskManager {
-        +List~Task~ tasks
+        +List<Task> tasks
         +int completedCount
-        +List~Map~ milestones
-        +addTask(title)
-        +completeTask(index): String?
-        +deleteTask(index)
-        +updateTaskTitle(index, newTitle)
-        +toJson(): Map~String, dynamic~
-        +fromJson(json)
+        +List<Map<String, dynamic>> milestones
+        +void addTask(String title)
+        +String? completeTask(int index)
+        +void deleteTask(int index)
+        +void updateTaskTitle(int index, String newTitle)
+        +String? _checkMilestone()
+        +Map<String, dynamic> toJson()
+        +void fromJson(Map<String, dynamic> json)
     }
 
-    TaskManager --> Task : manages
+    TaskManager --> Task : uses
+
 ```
 ##Methods of widgets
 ```mermaid
