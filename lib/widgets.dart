@@ -1,3 +1,8 @@
+//widgets.dart
+//4.30.25
+//Tyson Sterling
+//Widget build for each "task box"
+
 import 'package:flutter/material.dart';
 import '../model.dart';
 
@@ -19,23 +24,27 @@ class TaskBox extends StatefulWidget {
   State<TaskBox> createState() => _TaskBoxState();
 }
 
+//visibility check for Complete and Delete Buttons
 class _TaskBoxState extends State<TaskBox> {
   bool showOptions = false;
   bool isEditing = false;
   late TextEditingController _controller;
 
+  //initialize text field controller with task title
   @override
   void initState() {
     super.initState();
     _controller = TextEditingController(text: widget.task.title);
   }
 
+  //controller cleanup when widget removal 
   @override
   void dispose() {
     _controller.dispose();
     super.dispose();
   }
 
+  //Edit Toggle and save changes
   void toggleEdit() {
     if (isEditing) {
       widget.onEdit(_controller.text);
@@ -45,6 +54,7 @@ class _TaskBoxState extends State<TaskBox> {
     });
   }
 
+  //Widget Build
   @override
   Widget build(BuildContext context) {
     return Card(

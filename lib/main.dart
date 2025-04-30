@@ -172,7 +172,7 @@ class _MainPageState extends State<MainPage> {
     return File('$path/tasks.json');
   }
 
-  //Save Tasks to a Local File
+  //Save Tasks to a Local File with JSON
   Future<void> saveTasks() async {
     final file = await _localFile;
     List<Map<String, dynamic>> taskData =
@@ -184,9 +184,8 @@ class _MainPageState extends State<MainPage> {
     await file.writeAsString(jsonEncode(taskData));
   }
 
-  //Load tasks from a Local File
+  //Load tasks from a Local File wiht JSON
   Future<void> loadTasks() async {
-    try {
       final file = await _localFile;
       if (await file.exists()) {
         String contents = await file.readAsString();
@@ -203,15 +202,13 @@ class _MainPageState extends State<MainPage> {
                   .toList();
         });
       }
-    } catch (e) {
-      print("Error loading tasks: $e");
-    }
   }
 
+  //Main UI Build
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar( //For The Save Load Buttons 
         title: Text(widget.title),
         actions: [
           IconButton(
@@ -237,6 +234,7 @@ class _MainPageState extends State<MainPage> {
         ],
       ),
 
+      //Task Dragging Build 
       body: ReorderableListView.builder(
         padding: const EdgeInsets.all(16),
         itemCount: tasks.length,
@@ -247,6 +245,7 @@ class _MainPageState extends State<MainPage> {
             tasks.insert(newIndex, task);
           });
         },
+        //Task Box Widget, Unique Key is ListTile
         itemBuilder: (context, index) {
           return ListTile(
             key: ValueKey(tasks[index]),
@@ -260,6 +259,7 @@ class _MainPageState extends State<MainPage> {
         },
       ),
 
+      //Button for New Tasks
       floatingActionButton: FloatingActionButton(
         onPressed: _addTask,
         child: const Icon(Icons.add),

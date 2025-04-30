@@ -1,11 +1,14 @@
-//Model for task title and to track completed tasks
-
-//future update ideas: Completion count
+//model.dart
+//4.30.25
+//Tyson Sterling
+//Model for task title and to track completed tasks with data stored here
+//future update ideas: Updates to milestone displays and different data aspects
 
 class Task {
-  String title;
-  bool isCompleted;
+  String title; //Task Name
+  bool isCompleted; //Boolean for Done 
 
+  //Task Constructor, Title is Required and isCompleted is false
   Task({required this.title, this.isCompleted = false});
 
   Map<String, dynamic> toJson() => {
@@ -13,6 +16,7 @@ class Task {
         'isCompleted': isCompleted,
       };
 
+  //Map for JSON Serialization (Convert Data to JSON String)
   factory Task.fromJson(Map<String, dynamic> json) {
     return Task(
       title: json['title'] ?? '',
@@ -51,12 +55,14 @@ class TaskManager {
     }
   }
 
+  //Re Set with Index with newTitle
   void updateTaskTitle(int index, String newTitle) {
     if (index >= 0 && index < tasks.length) {
       tasks[index].title = newTitle;
     }
   }
 
+  //Check Stored Value for completions
   String? _checkMilestone() {
     for (var milestone in milestones) {
       if (completedCount == milestone['count']) {
