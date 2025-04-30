@@ -2,7 +2,7 @@
 
 A in-progress task manager that is meant to help guide and keep track of tasks that could be long, intermediate , or short term.
 
-#Documentation
+##Documentation
 
 	The purpose of this application is to provide a service for tracking and prioritizing tasks. A lot of life can happen at once and it can be hard to remember what some of the larger or smaller steps you want to take in life are. Having an application that can provide you with a visual reference to what you were pursing can be a great reminder of what you previously had in mind. With this app you can set different priorities for yourself with reordering. You can complete or delete tasks to set realistic goals and have rewards when you complete a goal.
  
