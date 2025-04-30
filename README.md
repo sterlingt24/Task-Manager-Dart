@@ -3,7 +3,7 @@
 A in-progress task manager that is meant to help guide and keep track of tasks that could be long, intermediate , or short term.
 
 ##Documentation
-
+__
 	The purpose of this application is to provide a service for tracking and prioritizing tasks. A lot of life can happen at once and it can be hard to remember what some of the larger or smaller steps you want to take in life are. Having an application that can provide you with a visual reference to what you were pursing can be a great reminder of what you previously had in mind. With this app you can set different priorities for yourself with reordering. You can complete or delete tasks to set realistic goals and have rewards when you complete a goal.
  
 	The app has a main view page with some methods to create a setState and re set that state is altered. The UI is also built within the main page and references the widgets page for its task box in particular. The view then communicates with the model to track the completion numbers and to manage task completion, deletion, and updates to the title. The widget file builds the UI of the task box itself and has a small controller for the removal and the editing saving.
@@ -18,6 +18,7 @@ A in-progress task manager that is meant to help guide and keep track of tasks t
 	The design side of things did not go to the extend of what I wanted, it was my wish to have something a lot different than the base design. The code I have is a great starting point to be able to continue on later. Issues with the specifics on how flutter adapts graphics makes it difficult to build but AI help and online resources like stackoverflow we reached the starting point it is at now.
  
 	Some of the future things I wanted to incorporate has been hinited at but there are a lot of changes id like to push toward. I would like to customize the UI a lot more to better fit my deep vision. I would also like to get this program to run fluidly through a mobile device, maybe to the playstore? I would also like to create a better architecture that does not have a lot of redundancies with its data handling. Better saving in the future would also be ideal, maybe auto saving after changes.
+___________________
 
 
 ## Getting Started
